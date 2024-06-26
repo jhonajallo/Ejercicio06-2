@@ -39,6 +39,9 @@ public class LibroServiceImpl implements LibroService {
     public List<Libro> listaPorTitulo(String titulo) {
         return repository.findByTitle(titulo);
     }
-
+    @Override
+    public List<Libro> listarPorCategoria(List<String> categorias) {
+        return repository.listarPorCategoria(categorias);
+    }
     
 }
